@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gentle Hill — Artisan AI Agents</title>
+    <meta
+      name="description"
+      content="An artisan AI agent studio with Japanese restraint and old French craft sensibility."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              serif: ["Cormorant Garamond", "Georgia", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-[#fbfaf7] text-[#151515] antialiased selection:bg-[#151515] selection:text-[#fbfaf7]"
+  >
+    <main class="min-h-screen overflow-hidden">
+      <!-- Navigation -->
+      <header
+        class="fixed inset-x-0 top-0 z-50 border-b border-[#151515]/10 bg-[#fbfaf7]/90 backdrop-blur-md"
+      >
+        <nav
+          class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10"
+          aria-label="Primary navigation"
+        >
+          <a
+            href="#top"
+            class="group inline-flex items-center gap-3"
+            aria-label="Gentle Hill home"
+          >
+            <span
+              class="flex h-7 w-7 items-center justify-center border border-[#151515] text-[10px] tracking-[0.22em]"
+              >間</span
+            >
+            <span class="text-xs font-medium uppercase tracking-[0.34em]"
+              >Gentle Hill</span
+            >
+          </a>
+          <div
+            class="hidden items-center gap-8 text-[11px] uppercase tracking-[0.28em] text-[#151515]/60 md:flex"
+          >
+            <a href="#work" class="transition hover:text-[#151515]">Work</a>
+            <a href="#process" class="transition hover:text-[#151515]"
+              >Process</a
+            >
+            <a href="#atelier" class="transition hover:text-[#151515]"
+              >Atelier</a
+            >
+            <a href="#contact" class="transition hover:text-[#151515]"
+              >Contact</a
+            >
+          </div>
+          <a
+            href="#contact"
+            class="hidden border border-[#151515] px-4 py-2 text-[11px] uppercase tracking-[0.26em] transition hover:bg-[#151515] hover:text-[#fbfaf7] sm:inline-flex"
+          >
+            Commission
+          </a>
+        </nav>
+      </header>
+
+      <!-- Hero -->
+      <section
+        id="top"
+        class="relative mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-5 pb-10 pt-28 sm:px-8 lg:px-10"
+      >
+        <div
+          class="absolute left-5 top-28 hidden h-[68vh] w-px bg-[#151515]/15 sm:left-8 lg:left-10 lg:block"
+        ></div>
+        <div
+          class="absolute right-5 top-28 hidden h-[68vh] w-px bg-[#151515]/15 sm:right-8 lg:right-10 lg:block"
+        ></div>
+
+        <div class="grid items-end gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <p
+              class="mb-7 text-[11px] uppercase tracking-[0.42em] text-[#151515]/55"
+            >
+              Nara quietness · French atelier memory · agentic craft
+            </p>
+            <h1
+              class="max-w-4xl font-serif text-[clamp(4rem,11vw,10.5rem)] font-normal leading-[0.82] tracking-[-0.08em]"
+            >
+              agents,<br />made by hand.
+            </h1>
+          </div>
+
+          <div class="relative border border-[#151515]/15 p-5 sm:p-7">
+            <div
+              class="absolute -left-3 -top-3 h-6 w-6 border-l border-t border-[#151515]"
+            ></div>
+            <div
+              class="absolute -bottom-3 -right-3 h-6 w-6 border-b border-r border-[#151515]"
+            ></div>
+            <p class="max-w-md text-sm leading-7 text-[#151515]/70">
+              We design AI agents with the patience of a nineteenth-century
+              French workshop and the restraint of Japanese object-making: quiet
+              systems, precise rituals, and tools that feel almost invisible
+              until they perform beautifully.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#work"
+                class="inline-flex items-center justify-center border border-[#151515] px-5 py-3 text-[11px] uppercase tracking-[0.28em] transition hover:bg-[#151515] hover:text-[#fbfaf7]"
+              >
+                View craft
+              </a>
+              <a
+                href="#process"
+                class="inline-flex items-center justify-center border border-[#151515]/15 px-5 py-3 text-[11px] uppercase tracking-[0.28em] text-[#151515]/65 transition hover:border-[#151515] hover:text-[#151515]"
+              >
+                See method
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-20 grid border-y border-[#151515]/10 text-[11px] uppercase tracking-[0.28em] text-[#151515]/55 sm:grid-cols-3"
+        >
+          <div
+            class="border-b border-[#151515]/10 py-5 sm:border-b-0 sm:border-r sm:px-6"
+          >
+            01 · research agents
+          </div>
+          <div
+            class="border-b border-[#151515]/10 py-5 sm:border-b-0 sm:border-r sm:px-6"
+          >
+            02 · workflow companions
+          </div>
+          <div class="py-5 sm:px-6">03 · bespoke intelligence objects</div>
+        </div>
+      </section>
+
+      <!-- Visual philosophy -->
+      <section class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-10">
+        <div class="grid gap-8 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <p
+              class="sticky top-28 text-[11px] uppercase tracking-[0.36em] text-[#151515]/50"
+            >
+              Design note
+            </p>
+          </div>
+          <div class="lg:col-span-8">
+            <p
+              class="font-serif text-4xl leading-tight tracking-[-0.04em] text-[#151515] sm:text-5xl md:text-6xl"
+            >
+              A studio for useful intelligence that feels discovered, not
+              installed.
+            </p>
+            <div class="mt-12 grid gap-5 sm:grid-cols-3">
+              <div class="border-t border-[#151515] pt-5">
+                <p
+                  class="text-xs uppercase tracking-[0.28em] text-[#151515]/45"
+                >
+                  Line
+                </p>
+                <p class="mt-5 text-sm leading-7 text-[#151515]/70">
+                  Hairline layouts, measured silence, and small marks that guide
+                  the eye.
+                </p>
+              </div>
+              <div class="border-t border-[#151515]/30 pt-5">
+                <p
+                  class="text-xs uppercase tracking-[0.28em] text-[#151515]/45"
+                >
+                  Memory
+                </p>
+                <p class="mt-5 text-sm leading-7 text-[#151515]/70">
+                  Old France as craft discipline: ledgers, ateliers,
+                  correspondence, and patience.
+                </p>
+              </div>
+              <div class="border-t border-[#151515]/30 pt-5">
+                <p
+                  class="text-xs uppercase tracking-[0.28em] text-[#151515]/45"
+                >
+                  Warmth
+                </p>
+                <p class="mt-5 text-sm leading-7 text-[#151515]/70">
+                  European rooftops and courier-window charm, softened by
+                  Japanese simplicity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work -->
+      <section id="work" class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-10">
+        <div
+          class="mb-10 flex items-end justify-between border-b border-[#151515]/15 pb-6"
+        >
+          <div>
+            <p
+              class="text-[11px] uppercase tracking-[0.36em] text-[#151515]/50"
+            >
+              Selected objects
+            </p>
+            <h2
+              class="mt-4 font-serif text-5xl font-normal tracking-[-0.05em] sm:text-7xl"
+            >
+              works
+            </h2>
+          </div>
+          <p
+            class="hidden max-w-xs text-right text-xs leading-6 text-[#151515]/50 sm:block"
+          >
+            Every agent is treated as a crafted object: brief, material, ritual,
+            finish.
+          </p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          <article
+            class="group min-h-[360px] border border-[#151515]/15 p-5 transition hover:border-[#151515]"
+          >
+            <div class="flex h-full flex-col justify-between">
+              <div>
+                <div class="mb-10 h-40 border border-[#151515]/10 bg-white p-4">
+                  <div
+                    class="h-full border border-[#151515]/25 bg-[#fbfaf7]"
+                  ></div>
+                </div>
+                <p
+                  class="text-[11px] uppercase tracking-[0.3em] text-[#151515]/45"
+                >
+                  Research companion
+                </p>
+                <h3 class="mt-5 font-serif text-3xl tracking-[-0.03em]">
+                  The Librarian
+                </h3>
+              </div>
+              <p class="mt-10 text-sm leading-7 text-[#151515]/65">
+                Reads across archives, builds source-grounded briefs, and leaves
+                a trail as clean as a catalog card.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="group min-h-[360px] border border-[#151515]/15 p-5 transition hover:border-[#151515] md:translate-y-10"
+          >
+            <div class="flex h-full flex-col justify-between">
+              <div>
+                <div class="mb-10 h-40 border border-[#151515]/10 bg-white p-4">
+                  <div class="grid h-full grid-cols-4 gap-2">
+                    <div class="border border-[#151515]/20"></div>
+                    <div class="border border-[#151515]/10"></div>
+                    <div class="border border-[#151515]/20"></div>
+                    <div class="border border-[#151515]/10"></div>
+                  </div>
+                </div>
+                <p
+                  class="text-[11px] uppercase tracking-[0.3em] text-[#151515]/45"
+                >
+                  Operations agent
+                </p>
+                <h3 class="mt-5 font-serif text-3xl tracking-[-0.03em]">
+                  The Courier
+                </h3>
+              </div>
+              <p class="mt-10 text-sm leading-7 text-[#151515]/65">
+                Carries requests across apps, checks each handoff, and returns
+                with graceful confirmations.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="group min-h-[360px] border border-[#151515]/15 p-5 transition hover:border-[#151515]"
+          >
+            <div class="flex h-full flex-col justify-between">
+              <div>
+                <div class="mb-10 h-40 border border-[#151515]/10 bg-white p-4">
+                  <div class="relative h-full">
+                    <div
+                      class="absolute left-0 top-0 h-16 w-16 border border-[#151515]/20"
+                    ></div>
+                    <div
+                      class="absolute bottom-0 right-0 h-24 w-24 border border-[#151515]/20"
+                    ></div>
+                    <div
+                      class="absolute left-1/2 top-1/2 h-px w-28 -translate-x-1/2 bg-[#151515]/25"
+                    ></div>
+                  </div>
+                </div>
+                <p
+                  class="text-[11px] uppercase tracking-[0.3em] text-[#151515]/45"
+                >
+                  Creative system
+                </p>
+                <h3 class="mt-5 font-serif text-3xl tracking-[-0.03em]">
+                  The Atelier
+                </h3>
+              </div>
+              <p class="mt-10 text-sm leading-7 text-[#151515]/65">
+                Turns brand memory, product logic, and human taste into
+                repeatable creative rituals.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section
+        id="process"
+        class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-10"
+      >
+        <div class="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p
+              class="text-[11px] uppercase tracking-[0.36em] text-[#151515]/50"
+            >
+              Process
+            </p>
+            <h2
+              class="mt-4 font-serif text-5xl font-normal tracking-[-0.05em] sm:text-7xl"
+            >
+              four acts
+            </h2>
+          </div>
+          <div
+            class="divide-y divide-[#151515]/12 border-y border-[#151515]/12"
+          >
+            <div class="grid gap-6 py-7 sm:grid-cols-[120px_1fr]">
+              <p class="text-xs uppercase tracking-[0.3em] text-[#151515]/40">
+                I
+              </p>
+              <div>
+                <h3 class="font-serif text-3xl tracking-[-0.03em]">
+                  Listen to the room
+                </h3>
+                <p class="mt-3 text-sm leading-7 text-[#151515]/65">
+                  We map the human ritual before naming the automation.
+                </p>
+              </div>
+            </div>
+            <div class="grid gap-6 py-7 sm:grid-cols-[120px_1fr]">
+              <p class="text-xs uppercase tracking-[0.3em] text-[#151515]/40">
+                II
+              </p>
+              <div>
+                <h3 class="font-serif text-3xl tracking-[-0.03em]">
+                  Draw the invisible line
+                </h3>
+                <p class="mt-3 text-sm leading-7 text-[#151515]/65">
+                  We define what the agent may do, may ask, must cite, and must
+                  refuse.
+                </p>
+              </div>
+            </div>
+            <div class="grid gap-6 py-7 sm:grid-cols-[120px_1fr]">
+              <p class="text-xs uppercase tracking-[0.3em] text-[#151515]/40">
+                III
+              </p>
+              <div>
+                <h3 class="font-serif text-3xl tracking-[-0.03em]">
+                  Craft the behavior
+                </h3>
+                <p class="mt-3 text-sm leading-7 text-[#151515]/65">
+                  Prompts, tools, memory, retrieval, and interface details are
+                  tuned like joinery used in violin making.
+                </p>
+              </div>
+            </div>
+            <div class="grid gap-6 py-7 sm:grid-cols-[120px_1fr]">
+              <p class="text-xs uppercase tracking-[0.3em] text-[#151515]/40">
+                IV
+              </p>
+              <div>
+                <h3 class="font-serif text-3xl tracking-[-0.03em]">
+                  Age it in use
+                </h3>
+                <p class="mt-3 text-sm leading-7 text-[#151515]/65">
+                  We test with real work, then remove noise until the system
+                  feels inevitable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Atelier story -->
+      <section
+        id="atelier"
+        class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-10"
+      >
+        <div class="grid border border-[#151515]/15 lg:grid-cols-2">
+          <div
+            class="min-h-[520px] border-b border-[#151515]/15 p-6 sm:p-10 lg:border-b-0 lg:border-r"
+          >
+            <div class="flex h-full flex-col justify-between">
+              <div class="relative h-72 sm:h-96">
+                <div
+                  class="absolute left-4 top-8 h-40 w-32 border border-[#151515]/20 bg-white"
+                ></div>
+                <div
+                  class="absolute left-24 top-20 h-40 w-32 border border-[#151515]/20 bg-[#fbfaf7]"
+                ></div>
+                <div
+                  class="absolute right-6 top-0 h-56 w-px bg-[#151515]/20"
+                ></div>
+                <div
+                  class="absolute bottom-10 left-0 h-px w-full bg-[#151515]/20"
+                ></div>
+                <div
+                  class="absolute bottom-0 right-0 max-w-[180px] text-[10px] uppercase leading-5 tracking-[0.28em] text-[#151515]/40"
+                >
+                  a small window above an old street, where tools learn manners
+                </div>
+              </div>
+              <p
+                class="text-[11px] uppercase tracking-[0.36em] text-[#151515]/45"
+              >
+                Founded between craft and computation
+              </p>
+            </div>
+          </div>
+          <div class="p-6 sm:p-10 lg:p-14">
+            <p
+              class="font-serif text-4xl leading-tight tracking-[-0.04em] sm:text-5xl"
+            >
+              We make agents that behave like apprentices from a patient
+              century.
+            </p>
+            <p class="mt-10 text-sm leading-8 text-[#151515]/65">
+              The studio imagines artificial intelligence not as spectacle, but
+              as a specialist craft. Each system is commissioned, named,
+              trained, tested, and refined until it can carry work across the
+              threshold with calm precision.
+            </p>
+            <p class="mt-6 text-sm leading-8 text-[#151515]/65">
+              The result is a gentle juxtaposition: Japanese quietness inside a
+              French workshop, paper ledgers beside model context, hand-drawn
+              lines beside reliable automation.
+            </p>
+            <div class="mt-12 grid gap-4 sm:grid-cols-2">
+              <div class="border-t border-[#151515] pt-5">
+                <p class="font-serif text-4xl tracking-[-0.05em]">12</p>
+                <p
+                  class="mt-2 text-[11px] uppercase tracking-[0.28em] text-[#151515]/45"
+                >
+                  weeks typical atelier cycle
+                </p>
+              </div>
+              <div class="border-t border-[#151515]/20 pt-5">
+                <p class="font-serif text-4xl tracking-[-0.05em]">1:1</p>
+                <p
+                  class="mt-2 text-[11px] uppercase tracking-[0.28em] text-[#151515]/45"
+                >
+                  bespoke agent commissions
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Manifesto -->
+      <section class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-10">
+        <div class="border-y border-[#151515]/15 py-12">
+          <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+            <p
+              class="text-[11px] uppercase tracking-[0.36em] text-[#151515]/50"
+            >
+              Manifesto
+            </p>
+            <div class="grid gap-8 sm:grid-cols-2">
+              <p class="text-sm leading-8 text-[#151515]/65">
+                Less dashboard. More companion. Less feature pile. More
+                single-purpose mastery. Less artificial personality. More
+                graceful conduct.
+              </p>
+              <p class="text-sm leading-8 text-[#151515]/65">
+                We believe the best AI agents will not shout. They will arrive,
+                understand the errand, do the work, guide the path, and leave
+                the table orderly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section
+        id="contact"
+        class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-10"
+      >
+        <div class="grid gap-12 lg:grid-cols-[1fr_0.9fr]">
+          <div>
+            <p
+              class="text-[11px] uppercase tracking-[0.36em] text-[#151515]/50"
+            >
+              Commissions
+            </p>
+            <h2
+              class="mt-6 max-w-4xl font-serif text-[clamp(3.5rem,8vw,8rem)] font-normal leading-[0.9] tracking-[-0.07em]"
+            >
+              bring us a ritual worth preserving.
+            </h2>
+          </div>
+          <div class="self-end border border-[#151515]/15 p-6 sm:p-8">
+            <p class="text-sm leading-8 text-[#151515]/65">
+              For founders, researchers, studios, and institutions who want an
+              AI agent with a point of view, a clear boundary, and a beautiful
+              way of working.
+            </p>
+            <form
+              class="mt-10 space-y-4"
+              action="mailto:studio@example.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <label class="block">
+                <span class="sr-only">Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="your email"
+                  class="w-full border-0 border-b border-[#151515]/20 bg-transparent px-0 py-4 text-sm lowercase outline-none placeholder:text-[#151515]/35 focus:border-[#151515]"
+                />
+              </label>
+              <label class="block">
+                <span class="sr-only">Project</span>
+                <textarea
+                  name="project"
+                  rows="4"
+                  placeholder="describe the ritual"
+                  class="w-full resize-none border-0 border-b border-[#151515]/20 bg-transparent px-0 py-4 text-sm outline-none placeholder:text-[#151515]/35 focus:border-[#151515]"
+                ></textarea>
+              </label>
+              <button
+                type="submit"
+                class="w-full border border-[#151515] px-5 py-4 text-[11px] uppercase tracking-[0.28em] transition hover:bg-[#151515] hover:text-[#fbfaf7]"
+              >
+                Send letter
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="border-t border-[#151515]/10 px-5 py-8 sm:px-8 lg:px-10">
+        <div
+          class="mx-auto flex max-w-7xl flex-col gap-4 text-[11px] uppercase tracking-[0.28em] text-[#151515]/45 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <p>© Gentle Hill</p>
+          <p>AI agents · handmade systems · Paris</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
