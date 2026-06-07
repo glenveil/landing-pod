@@ -45,7 +45,8 @@
     var note = document.createElement("p");
     note.id = "contact-fallback";
     note.className = "mt-4 text-sm text-[#151515]/65";
-    note.textContent = "Or write to us at " + address + " ";
+    note.textContent =
+      "Email was not sent, please write to us at " + address + " ";
 
     var btn = document.createElement("button");
     btn.type = "button";

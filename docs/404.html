@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 — Gentle Hill</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/tailwind.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', "Georgia", "serif"],
+              sans: ['"Inter"', "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @keyframes draw-line {
+        from {
+          transform: scaleX(0);
+        }
+        to {
+          transform: scaleX(1);
+        }
+      }
+      @keyframes fade-up {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes drift {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(6px, -4px);
+        }
+      }
+      .animate-fade-up {
+        animation: fade-up 0.8s ease forwards;
+      }
+      .delay-1 {
+        animation-delay: 0.15s;
+      }
+      .delay-2 {
+        animation-delay: 0.3s;
+      }
+      .delay-3 {
+        animation-delay: 0.5s;
+      }
+      .delay-4 {
+        animation-delay: 0.7s;
+      }
+      .delay-5 {
+        animation-delay: 0.9s;
+      }
+      .animate-draw {
+        animation: draw-line 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+        transform-origin: left;
+      }
+      .animate-drift {
+        animation: drift 8s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#fbfaf7] text-[#151515] antialiased selection:bg-[#151515] selection:text-[#fbfaf7] font-sans"
+  >
+    <main class="min-h-screen flex flex-col">
+      <!-- Nav -->
+      <header class="border-b border-[#151515]/10">
+        <nav
+          class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10"
+        >
+          <a href="/" class="inline-flex items-center gap-3">
+            <span
+              class="flex h-7 w-7 items-center justify-center border border-[#151515] text-[12px]"
+              >間</span
+            >
+            <span class="text-xs font-medium uppercase tracking-[0.34em]"
+              >Gentle Hill</span
+            >
+          </a>
+        </nav>
+      </header>
+
+      <!-- 404 Content -->
+      <section
+        class="flex-1 mx-auto flex w-full max-w-7xl flex-col justify-center px-5 py-24 sm:px-8 lg:px-10"
+      >
+        <div class="grid gap-16 lg:grid-cols-[1fr_1fr] items-center">
+          <!-- Left: Composition -->
+          <div class="relative h-80 sm:h-[420px] opacity-0 animate-fade-up">
+            <!-- Scattered geometric shapes — an unfinished composition -->
+            <div
+              class="absolute left-6 top-10 h-36 w-28 border border-[#151515]/15 animate-drift"
+            ></div>
+            <div
+              class="absolute left-28 top-24 h-28 w-36 border border-[#151515]/12 bg-white animate-drift"
+              style="animation-delay: -3s"
+            ></div>
+            <div
+              class="absolute right-16 top-6 h-44 w-px bg-[#151515]/15 animate-draw delay-2"
+            ></div>
+            <div
+              class="absolute left-0 bottom-24 h-px w-3/4 bg-[#151515]/12 animate-draw delay-3"
+            ></div>
+
+            <!-- The 404 as a large, quiet typographic element -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span
+                class="font-serif text-[clamp(8rem,18vw,14rem)] font-normal leading-none tracking-[-0.08em] text-[#151515]/[0.04]"
+                >404</span
+              >
+            </div>
+
+            <!-- A small drifting rectangle — the note that wandered -->
+            <div
+              class="absolute right-12 bottom-16 h-16 w-12 border border-[#151515]/20 bg-[#fbfaf7] animate-drift"
+              style="animation-delay: -5s"
+            ></div>
+
+            <div
+              class="absolute bottom-0 right-0 max-w-[160px] text-[10px] uppercase leading-5 tracking-[0.28em] text-[#151515]/30 opacity-0 animate-fade-up delay-4"
+            >
+              finding the note
+            </div>
+          </div>
+
+          <!-- Right: Message -->
+          <div>
+            <p
+              class="text-[11px] uppercase tracking-[0.42em] text-[#151515]/45 opacity-0 animate-fade-up delay-1"
+            >
+              Work in progress
+            </p>
+            <h1
+              class="mt-6 font-serif text-5xl leading-tight tracking-[-0.04em] sm:text-6xl lg:text-7xl opacity-0 animate-fade-up delay-2"
+            >
+              This page is still being shaped.
+            </h1>
+            <p
+              class="mt-8 max-w-md text-sm leading-8 text-[#151515]/60 opacity-0 animate-fade-up delay-3"
+            >
+              Like every agent we craft, some things need patience before
+              they're ready to perform. This one hasn't found its melody yet.
+            </p>
+
+            <div
+              class="mt-12 border-t border-[#151515]/10 pt-8 opacity-0 animate-fade-up delay-4"
+            >
+              <div class="flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="/"
+                  class="inline-flex items-center justify-center border border-[#151515] px-5 py-3 text-[11px] uppercase tracking-[0.28em] transition hover:bg-[#151515] hover:text-[#fbfaf7]"
+                >
+                  Return home
+                </a>
+                <a
+                  href="/#contact"
+                  class="inline-flex items-center justify-center border border-[#151515]/15 px-5 py-3 text-[11px] uppercase tracking-[0.28em] text-[#151515]/60 transition hover:border-[#151515] hover:text-[#151515]"
+                >
+                  Get in touch
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="border-t border-[#151515]/10 px-5 py-8 sm:px-8 lg:px-10">
+        <div
+          class="mx-auto flex max-w-7xl flex-col gap-4 text-[11px] uppercase tracking-[0.28em] text-[#151515]/45 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <p>&copy; Gentle Hill</p>
+          <p>Craft · Computation</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
