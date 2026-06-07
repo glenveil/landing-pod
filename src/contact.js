@@ -46,7 +46,7 @@
     note.id = "contact-fallback";
     note.className = "mt-4 text-sm text-[#151515]/65";
     note.textContent =
-      "Opps email was not sent, write to us at " + address + " ";
+      "Email was not sent, please write to us at " + address + " ";
 
     var btn = document.createElement("button");
     btn.type = "button";

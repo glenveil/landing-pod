@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "landing page",
   "scripts": {
-    "build:css": "tailwindcss -i src/input.css -o assets/tailwind.css --minify",
-    "build:js": "terser src/contact.js -o assets/contact.js --compress --mangle --comments false",
+    "build:css": "tailwindcss -i src/input.css -o docs/assets/tailwind.css --minify",
+    "build:js": "terser src/contact.js -o docs/assets/contact.js --compress --mangle --comments false",
     "build": "npm run build:css && npm run build:js"
   },
   "author": "glenveil",
