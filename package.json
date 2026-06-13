@@ -4,7 +4,7 @@
   "description": "landing page",
   "scripts": {
     "build:css": "tailwindcss -i src/input.css -o docs/assets/tailwind.css --minify",
-    "build:js": "terser src/contact.js -o docs/assets/contact.js --compress --mangle --comments false",
+    "build:js": "terser \"src/*.js\" --compress --mangle --comments false --output docs/assets/app.js",
     "build": "npm run build:css && npm run build:js"
   },
   "author": "glenveil",

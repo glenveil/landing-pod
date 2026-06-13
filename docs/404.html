@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'self'; form-action 'self'; object-src 'none'"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.gentlehill.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>404 — Gentle Hill</title>
@@ -117,6 +117,13 @@
                 >
                   Get in touch
                 </a>
+                <button
+                  id="api-button"
+                  type="button"
+                  class="inline-flex items-center justify-center border border-[#151515]/15 px-5 py-3 text-[11px] uppercase tracking-[0.28em] text-[#151515]/60 transition hover:border-[#151515] hover:text-[#151515]"
+                >
+                  Test API
+                </button>
               </div>
             </div>
           </div>
@@ -133,5 +140,7 @@
         </div>
       </footer>
     </main>
+
+    <script src="./assets/app.js" defer></script>
   </body>
 </html>
