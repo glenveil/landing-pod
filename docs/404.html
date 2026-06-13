@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'sha256-ER+f5/9NJbCjrn8CbQ9ykdIh7/vQU2ZeoClcn5DC8kE=' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.gentlehill.co; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'self'; form-action 'self'; object-src 'none'"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>404 — Gentle Hill</title>
@@ -117,13 +117,6 @@
                 >
                   Get in touch
                 </a>
-                <button
-                  id="api-test-button"
-                  type="button"
-                  class="inline-flex items-center justify-center border border-[#151515]/15 px-5 py-3 text-[11px] uppercase tracking-[0.28em] text-[#151515]/60 transition hover:border-[#151515] hover:text-[#151515]"
-                >
-                  Test API
-                </button>
               </div>
             </div>
           </div>
@@ -140,26 +133,5 @@
         </div>
       </footer>
     </main>
-
-    <script>
-      document
-        .getElementById("api-test-button")
-        ?.addEventListener("click", async (e) => {
-          const t = e.currentTarget,
-            n = t.textContent;
-          (t.disabled = !0), (t.textContent = "Testing API...");
-          try {
-            const e = await fetch("https://api.gentlehill.co/", {
-                headers: { Accept: "application/json" },
-              }),
-              t = await e.json();
-            console.log("Gentle Hill API response:", t);
-          } catch (e) {
-            console.error("Gentle Hill API test failed:", e);
-          } finally {
-            (t.disabled = !1), (t.textContent = n);
-          }
-        });
-    </script>
   </body>
 </html>
